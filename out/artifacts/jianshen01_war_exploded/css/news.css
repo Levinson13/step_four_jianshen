@@ -1,0 +1,107 @@
+.news-middle{
+    width: 1200px;
+    height: 800px;
+    /*border: 1px solid red;*/
+    margin: auto;
+    font-family: 微软雅黑;
+}
+/*小标题*/
+.news-middle >div:nth-child(1) {
+    width: 430px;
+    height: 50px;
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    background-color: #333333;
+}
+.news-middle >div:nth-child(1) div:nth-child(1){
+    /*float: left;*/
+    /*text-align: center;*/
+    /*padding: 20px;*/
+    /*padding: 15px;*/
+    margin-left: 15%;
+    height: 50px;
+}
+.news-middle >div:nth-child(1) div{
+    font-size: 15px;
+    color: white;
+    width: 100px;
+    height: 50px;
+    /*border: 1px solid red;*/
+    float: left;
+    line-height: 50px;
+    /*padding-top: 18px;*/
+    /*padding-left: 10px ;*/
+}
+.news-middle >div:nth-child(1) div:hover{
+    background-color: red;
+}
+/*具体动态*/
+.news{
+    width: 1000px;
+    height: 600px;
+    /*border: 1px solid red;*/
+    margin: auto;
+}
+.news > div {
+    width: 900px;
+    height: 100px;
+    /*border: 1px solid red;*/
+    /*margin: 10px 0;*/
+    border-bottom: 1px solid slategray;
+    margin: 15px;
+}
+.news .floatLeft:nth-child(1){
+    margin: 15px 40px;
+    padding: 10px 0;
+    /*border: 1px solid red;*/
+    width: 60px;
+    height: 40px;
+    background-color: #2a3035;
+}
+.news .floatLeft:nth-child(1) div:nth-child(1) {
+    color: #ffffff;
+    font-size: 20px;
+}
+.news .floatLeft:nth-child(1) div:nth-child(2) {
+    color: #ffffff;
+    font-size: 10px;
+    margin-top: 5px;
+}
+.news .floatLeft:nth-child(2){
+    margin-top: 10px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 700px;
+}
+.news .floatLeft:nth-child(2) div:nth-child(1) {
+    color: #5a5a5a;
+    font-size: 17px;
+}
+.news .floatLeft:nth-child(2) div:nth-child(2) {
+    color: #979797;
+    font-size: 10px;
+    margin-top: 10px;
+}
+.page{
+    width: 1200px;
+    height: 50px;
+    /*border: 1px solid red;*/
+}
+.page div{
+    margin: 40px auto;
+    height: 50px;
+    width: 200px;
+}
+.page div span{
+    /*width: 160px;*/
+    /*height: 50px;*/
+    color: #dddddd;
+    border: 1px solid slategray;
+    padding: 0 5px;
+}
+.page div span:nth-child(2) {
+    background-color: black;
+}

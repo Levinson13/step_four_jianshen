@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.home-top{
+    width: 100vw;
+    height: 200px;
+    background-color: sandybrown;
+}
+.home-left {
+    width: 15%;
+    float: left;
+    /*border: 1px solid cornflowerblue;*/
+    text-align: center;
+    box-sizing: border-box;
+    background-color: lightskyblue;
+    height: 100vh;
+}
+.home-right{
+    width: 85%;
+    float: left;
+    height: 100vh;
+}
+.caidan{
+    font-size: 20px;
+    line-height: 30px;
+}
+.caidan ol{
+    text-indent: 2em;
+    list-style: none;
+}
+
+.caidan ol li:hover{
+    background-color: orangered;
+}

@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jianshen01:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jianshen01" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="commons-beanutils-1.7.0" />
+          <element id="library" level="project" name="fastjson-1.2.71" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="jianshen01/web/Web" />
+    </root>
+  </artifact>
+</component>

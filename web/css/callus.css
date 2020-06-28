@@ -1,0 +1,48 @@
+.ditu{
+    width: 1400px;
+    height: 600px;
+    /*border: 1px solid red;*/
+    margin: 50px auto;
+}
+#ditu{
+    width: 600px;
+    height: 600px;
+    float: left;
+    margin-left: 155px;
+}
+.tubiao{
+    width: 600px;
+    height: 600px;
+    /*border: 1px solid red;*/
+    float: left;
+}
+.tubiao > div{
+    width: 550px;
+    height: 200px;
+    /*border: 1px solid red;*/
+}
+.tubiao > div >div{
+    width: 225px;
+    height: 200px;
+    border: 1px solid #cccccc;
+    border-left: none;
+    float: left;
+    margin: auto;
+}
+.tubiao > div:nth-child(2) > div{
+    border-top: none;
+    border-bottom: none;
+}
+.tubiao > div >div div:nth-child(1){
+    margin-top: 50px;
+    margin-left:  80px;
+}
+.tubiao > div >div div:nth-child(2){
+    margin-top: 10px;
+    margin-left:  70px;
+}
+/*.tubiao > div >div{*/
+/*    width: 220px;*/
+/*    height: 200px;*/
+/*    margin: auto;*/
+/*}*/

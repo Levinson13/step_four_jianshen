@@ -1,0 +1,51 @@
+.home-top{
+    background-image: url("../img/jghy.jpg") ;
+    height: 600px;
+    background-size: 100% ;
+}
+.home-top-background{
+    background-color: rgb(51,51,51);
+    height: 100px;
+}
+.home-nav{
+    /*border: 1px solid red;*/
+    margin: auto;
+    height: 100px;
+    width: 1000px;
+}
+.home-logo-img{
+    margin: 20px;
+    width: 95px;
+    float: left;
+}
+.home-zi{
+    float: left;
+    color: white;
+    margin: 20px 10px 20px;
+}
+.home-zi-cn{
+    margin-top: 10px;
+    width: 100px;
+    height: 26px;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.home-zi-en{
+
+    width: 67px;
+    height: 16px;
+    font-size: 10px;
+}
+.home-nav-parts{
+    height: 100px;
+}
+.home-nav-parts div{
+    float: left;
+    padding: 0 30px;
+    color: #cecece;
+    line-height: 100px;
+    font-size: 16px;
+}
+.home-nav-parts div:hover{
+    background-color: red;
+}
