@@ -6,7 +6,592 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61473644-8b05-4bb4-853c-d94bef3d6c65" name="Default Changelist" comment="" />
+    <list default="true" id="61473644-8b05-4bb4-853c-d94bef3d6c65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/jianshen01_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_beanutils_1_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/fastjson_1_2_71.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jianshen01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/META-INF/jianshen01.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/AboutDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/CoachDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/CoachPostDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/NavDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/NewsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/ProductDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/StudentDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/UserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/impl/AboutDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/impl/CoachDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/impl/CoachPostDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/impl/NavDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/impl/NewsDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/impl/ProductDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/impl/StudentDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/AboutDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/AboutFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/CallusDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/CoachDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/CoachFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/HomeDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/NewsDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/NewsFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/PageDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/ProductDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/ProductFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/ResultDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/dto/StudentFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/model/AboutModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/model/CoachModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/model/CoachPostModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/model/NavModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/model/NewsModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/model/NewsTypeModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/model/ProductModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/model/StudentModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/IAboutService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/ICoachService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/IHomeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/INavService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/INewsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/IProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/IStudentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/IUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/impl/AboutServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/impl/CoachServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/impl/HomeServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/impl/NavServletImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/impl/NewsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/impl/StudentServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/AboutServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/CallusServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/CoachServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/HomeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/LoginServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/NewsServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/ProductServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/RegisterServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/HomeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/about/AboutAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/about/AboutDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/about/AboutEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/about/AboutFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/about/AboutFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/about/AboutListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/coach/CoachAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/coach/CoachDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/coach/CoachEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/coach/CoachFindById.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/coach/CoachFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/coach/CoachListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/nav/NavAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/nav/NavDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/nav/NavEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/nav/NavFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/nav/NavListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/news/NewsAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/news/NewsDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/news/NewsEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/news/NewsFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/news/NewsFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/news/NewsListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/product/ProductAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/product/ProductDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/product/ProductEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/product/ProductFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/product/ProductFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/product/ProductListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/student/StudentAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/student/StudentDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/student/StudentEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/student/StudentFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/student/StudentFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/servlet/back/student/StudentListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/util/Code.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/util/JDBC.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/util/MyFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/classes/com/cn/wanxi/util/Upload.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/commons-beanutils-1.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/commons-collections-3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/commons-fileupload-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/commons-io-2.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/commons-lang-2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/commons-logging.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/ezmorph-1.0.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/fastjson-1.2.71.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/json-lib-2.4-jdk15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/mysql-connector-java-8.0.20.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/lib/servlet-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/aboutAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/aboutEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/aboutList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/coachAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/coachEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/coachList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/left.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/navAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/navEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/navList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/newsAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/newsEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/newsList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/productAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/productEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/productList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/studentAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/studentEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/back/studentList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/about.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/backhome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/callus.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/coach.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/foot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/reg.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/css/top.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/html/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/html/callus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/html/coach.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/html/foot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/html/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/html/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/html/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/html/top.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/097e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/0c6l.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/0qkj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/2ady.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/2bbu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/2fi2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/34d1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/3d9i.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/45rq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/4idy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/6gl4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/86co.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/93be.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/94zj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/SLMF-Portada-BBD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/acfa5605108c3150158055c03e58b035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/bty3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/bv53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/c132.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/c6uu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/ca9a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/dfsv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/dhbr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/dmzo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/eda9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/ee77.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/fsk9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/gu3z.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/jghy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/jsjr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/k1nj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/l3pb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/lq5m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/m1z5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/n6ft.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/p7up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/pnol.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/qq_pzt0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/r48h.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/s3vh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/scott-webb-22437.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/uk1s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/wb_7xsj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/wtw0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/wwuc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/wx3z.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/wx_1j0c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/wxjsn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/img/xb94.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/coach.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/jquery-3.5.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/news.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/student.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/js/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/about.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/callus.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/coach.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/foot.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/news.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/product.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/jsp/top.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/097e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/2ady.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/2fi2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/34d1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/45rq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/86co.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/93be.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/94zj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/acfa5605108c3150158055c03e58b035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/bv53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/c132.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/eda9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/pangmei.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/peng.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/jianshen01_war_exploded/loadImg/美丽.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/META-INF/jianshen01.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/AboutDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/CoachDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/CoachPostDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/NavDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/NewsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/ProductDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/StudentDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/UserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/impl/AboutDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/impl/CoachDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/impl/CoachPostDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/impl/NavDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/impl/NewsDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/impl/ProductDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/impl/StudentDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/AboutDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/AboutFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/CallusDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/CoachDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/CoachFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/HomeDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/NewsDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/NewsFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/PageDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/ProductDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/ProductFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/ResultDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/dto/StudentFindDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/model/AboutModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/model/CoachModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/model/CoachPostModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/model/NavModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/model/NewsModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/model/NewsTypeModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/model/ProductModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/model/StudentModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/IAboutService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/ICoachService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/IHomeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/INavService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/INewsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/IProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/IStudentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/IUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/impl/AboutServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/impl/CoachServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/impl/HomeServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/impl/NavServletImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/impl/NewsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/impl/StudentServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/AboutServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/CallusServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/CoachServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/HomeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/LoginServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/NewsServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/ProductServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/RegisterServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/HomeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/about/AboutAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/about/AboutDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/about/AboutEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/about/AboutFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/about/AboutFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/about/AboutListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/coach/CoachAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/coach/CoachDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/coach/CoachEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/coach/CoachFindById.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/coach/CoachFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/coach/CoachListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/nav/NavAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/nav/NavDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/nav/NavEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/nav/NavFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/nav/NavListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/news/NewsAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/news/NewsDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/news/NewsEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/news/NewsFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/news/NewsFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/news/NewsListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/product/ProductAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/product/ProductDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/product/ProductEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/product/ProductFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/product/ProductFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/product/ProductListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/student/StudentAddServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/student/StudentDelServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/student/StudentEditServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/student/StudentFindByIdServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/student/StudentFindListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/servlet/back/student/StudentListServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/util/Code.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/util/JDBC.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/util/MyFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/jianshen01/com/cn/wanxi/util/Upload.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/AboutDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/CoachDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/CoachPostDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/NavDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/NewsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/ProductDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/impl/AboutDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/impl/CoachDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/impl/CoachPostDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/impl/NavDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/impl/NewsDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/impl/ProductDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/impl/StudentDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/AboutDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/AboutFindDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/CallusDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/CoachDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/CoachFindDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/HomeDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/NewsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/NewsFindDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/PageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/ProductFindDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/ResultDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/dto/StudentFindDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/model/AboutModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/model/CoachModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/model/CoachPostModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/model/NavModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/model/NewsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/model/NewsTypeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/model/ProductModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/model/StudentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/IAboutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/ICoachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/IHomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/INavService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/INewsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/IStudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/impl/AboutServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/impl/CoachServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/impl/HomeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/impl/NavServletImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/impl/NewsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/AboutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/CallusServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/CoachServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/HomeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/NewsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/RegisterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/HomeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutDelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutFindByIdServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutFindListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/coach/CoachAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/coach/CoachDelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/coach/CoachEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/coach/CoachFindById.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/coach/CoachFindListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/coach/CoachListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/nav/NavAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/nav/NavDelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/nav/NavEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/nav/NavFindByIdServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/nav/NavListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/news/NewsAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/news/NewsDelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/news/NewsEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/news/NewsFindByIdServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/news/NewsFindListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/news/NewsListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/product/ProductAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/product/ProductDelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/product/ProductEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/product/ProductFindByIdServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/product/ProductFindListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/product/ProductListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/student/StudentAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/student/StudentDelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/student/StudentEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/student/StudentFindByIdServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/student/StudentFindListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/student/StudentListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/util/Code.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/util/JDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/util/MyFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cn/wanxi/util/Upload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-collections-3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-lang-2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-logging.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/ezmorph-1.0.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.71.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json-lib-2.4-jdk15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.20.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/aboutAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/aboutEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/aboutList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/coachAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/coachEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/coachList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/left.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/navAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/navEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/navList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/newsAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/newsEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/newsList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/productAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/productEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/productList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/studentAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/studentEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/studentList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/about.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/backhome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/callus.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/coach.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/foot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/reg.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/top.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/callus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/coach.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/foot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/top.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/097e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/0c6l.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/0qkj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/2ady.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/2bbu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/2fi2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/34d1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/3d9i.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/45rq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/4idy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/6gl4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/86co.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/93be.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/94zj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/SLMF-Portada-BBD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/acfa5605108c3150158055c03e58b035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/bty3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/bv53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/c132.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/c6uu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/ca9a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/dfsv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/dhbr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/dmzo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/eda9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/ee77.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/fsk9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/gu3z.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/jghy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/jsjr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/k1nj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/l3pb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/lq5m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/m1z5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/n6ft.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/p7up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/pnol.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/qq_pzt0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/r48h.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/s3vh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/scott-webb-22437.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/uk1s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/wb_7xsj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/wtw0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/wwuc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/wx3z.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/wx_1j0c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/wxjsn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/xb94.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/coach.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery-3.5.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/news.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/student.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/about.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/callus.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/coach.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/foot.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/news.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/product.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/top.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/097e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/2ady.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/2fi2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/34d1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/acfa5605108c3150158055c03e58b035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/bv53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/pangmei.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/peng.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loadImg/美丽.png" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +608,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutDelServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="268">
-              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,7 +620,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutEditServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="73">
-              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -44,7 +629,7 @@
         <entry file="file://$PROJECT_DIR$/web/back/newsAdd.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="778">
-              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -53,7 +638,7 @@
         <entry file="file://$PROJECT_DIR$/web/js/about.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -62,7 +647,7 @@
         <entry file="file://$PROJECT_DIR$/web/back/coachEdit.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -71,7 +656,7 @@
         <entry file="file://$PROJECT_DIR$/web/back/aboutEdit.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="494">
-              <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+              <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -87,6 +672,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -418,15 +1006,16 @@
       <option name="presentableId" value="Default" />
       <updated>1593307049214</updated>
       <workItem from="1593307054235" duration="9329000" />
-      <workItem from="1593324398223" duration="13266000" />
+      <workItem from="1593324398223" duration="13597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22595000" />
+    <option name="totallyTimeSpent" value="22926000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -438,7 +1027,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -504,6 +1093,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="后台管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台管理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -862,7 +1453,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutDelServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -872,21 +1463,21 @@
     <entry file="file://$PROJECT_DIR$/web/back/newsAdd.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="778">
-          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/about.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/back/coachEdit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -914,14 +1505,14 @@
     <entry file="file://$PROJECT_DIR$/web/back/aboutEdit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
-          <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cn/wanxi/servlet/back/about/AboutEditServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
