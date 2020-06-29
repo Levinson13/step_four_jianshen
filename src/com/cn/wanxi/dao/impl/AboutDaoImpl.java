@@ -83,9 +83,9 @@ public class AboutDaoImpl implements AboutDao {
 
     @Override
     public List<AboutModel> findAboutListByCondition(AboutFindDto condition, PageDto pageDto) {
-        String sql = "select * from tb_coach where 1=1 ";
+        String sql = "select * from tb_about where 1=1 ";
         if (condition.getContent() != null && !"".equals(condition.getContent())) {
-            sql += "and coach_name like '%" + condition.getContent() + "%' ";
+            sql += "and about_content like '%" + condition.getContent() + "%' ";
         }
         sql += " limit " + (pageDto.getPageNum() - 1) * pageDto.getPageSize() + "," + pageDto.getPageSize();
         ResultSet resultSet = JDBC.excuteQuery(sql);

@@ -12,12 +12,12 @@
 </head>
 <script src="/js/jquery-3.5.1.js"></script>
 <script src="/js/about.js"></script>
+<script src="/js/page.js"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <div>信息内容：<input type="text" id="aboutcontent" name="aboutcontent"></div>
-<div>信息图片：<input type="file" id="img" name="img"></div>
 <input type="button" id="find" name="find" onclick="find()" value="查询"/>
 </div>
 <table class="table table-striped">

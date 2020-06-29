@@ -20,13 +20,19 @@ public class AboutEditServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Upload upload = new Upload();
-        String string = upload.fileImg(req);
-        String[] aa = string.split("@@");
+
+        String content = req.getParameter("content");
+        String img = req.getParameter("img");
+
+//        Upload upload = new Upload();
+//        String string = upload.fileImg(req);
+//        String[] aa = string.split("@@");
 
         AboutModel aboutModel = new AboutModel();
-        aboutModel.setContent(aa[0]);
-        aboutModel.setImg(aa[1]);
+//        aboutModel.setContent(aa[0]);
+//        aboutModel.setImg(aa[1]);
+        aboutModel.setContent(content);
+        aboutModel.setImg(img);
 
         int num = iAboutService.update(aboutModel);
 

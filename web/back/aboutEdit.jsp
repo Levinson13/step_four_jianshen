@@ -24,7 +24,7 @@
             data: {id: id},
             dataType: 'json',
             success: function (data) {
-                console.log(data);
+                // console.log(data);
                 $("#content").val(data.content);
                 $("#img").val(data.img);
             }
@@ -32,16 +32,23 @@
     }
 
     function editAboutInfo() {
-        let aboutId = localStorage.getItem("coachId");
-        let data = new FormData();
-        data.append("content", $("#content").val());
-        data.append("img", $("#img").val());
-        data.append("id", aboutId);
+        let aboutId = localStorage.getItem("aboutId");
+        // let data = new FormData();
+        // data.append("content", $("#content").val());
+        // data.append("img", $("#img").val());
+        // data.append("id", aboutId);
+        let data = {
+            content: $("#content").val(),
+            img: $("#img").val(),
+            id: aboutId
+        };
         $.ajax({
             url:'/editAbout',
             type:'post',
             data:data,
             dataType: 'json',
+            // contentType: false,
+            // processData: false,
             success:function (data) {
                 console.log(data);
                 if (data == 1) {
@@ -54,14 +61,16 @@
     }
 </script>
 <body>
-<div>
-    教练名称：<input type="text" name="content" id="content">
-</div>
-<div>
-    教练图片：<input type="text" name="img" id="img">
-</div>
-<div>
-    <input type="button" value="提交" onclick="editAboutInfo()">
-</div>
+<form>
+    <div>
+        信息名称：<input type="text" name="content" id="content">
+    </div>
+    <div>
+        信息图片：<label  name="img" id="img"><input type="file">点击上传</label>
+    </div>
+    <div>
+        <input type="button" value="提交" onclick="editAboutInfo()">
+    </div>
+</form>
 </body>
 </html>

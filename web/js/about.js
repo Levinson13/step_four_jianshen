@@ -35,6 +35,25 @@ function del(id) {
     })
 }
 
+function find() {
+    let data = {
+        content: $("#aboutcontent").val(),
+        pageSize: $("#pageSize").val(),
+        pageNum: $("#pageNum").val()
+    };
+    console.log(data);
+    $.ajax({
+        url:'/findAboutList',
+        type:'post',
+        data:data,
+        dataType: 'json',
+        success:function (data) {
+            console.log(JSON.stringify(data));
+            setData(data.object);
+        }
+    })
+}
+
 function setData(data) {
     let html = '';
     for (let i = 0; i < data.length; i++) {
