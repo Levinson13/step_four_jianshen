@@ -66,7 +66,7 @@
         信息名称：<input type="text" name="content" id="content">
     </div>
     <div>
-        信息图片：<label  name="img" id="img"><input type="file">点击上传</label>
+        信息图片：<label><input type="file" name="img" id="img">点击上传</label>
     </div>
     <div>
         <input type="button" value="提交" onclick="editAboutInfo()">
