@@ -55,10 +55,10 @@ function login() {
             dataType : 'json',
             success : function (data) {
                 if (data == 1) {
-                    window.location.href = "../back/home.jsp";
+                    window.location.href = "/back/home.jsp";
                 }else {
                     alert("登录失败");
-                    window.location.href = "../jsp/login.jsp";
+                    window.location.href = "/jsp/login.jsp";
                 }
             }
         });
@@ -78,10 +78,10 @@ function register() {
         success : function (data) {
             if (data == 1) {
                 alert("注册成功");
-                window.location.href = "../jsp/login.jsp";
+                window.location.href = "/jsp/login.jsp";
             }else {
                 alert("用户名已存在");
-                window.location.href = "../jsp/register.jsp";
+                window.location.href = "/jsp/register.jsp";
             }
         }
     })

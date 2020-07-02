@@ -1,14 +1,10 @@
 package com.cn.wanxi.service.impl;
 
-import com.cn.wanxi.dao.CoachDao;
-import com.cn.wanxi.dao.NavDao;
-import com.cn.wanxi.dao.NewsDao;
-import com.cn.wanxi.dao.StudentDao;
-import com.cn.wanxi.dao.impl.CoachDaoImpl;
-import com.cn.wanxi.dao.impl.NavDaoImpl;
-import com.cn.wanxi.dao.impl.NewsDaoImpl;
-import com.cn.wanxi.dao.impl.StudentDaoImpl;
+import com.cn.wanxi.dao.*;
+import com.cn.wanxi.dao.impl.*;
+import com.cn.wanxi.dto.CoachDto;
 import com.cn.wanxi.dto.HomeDto;
+import com.cn.wanxi.dto.NewsDto;
 import com.cn.wanxi.model.NavModel;
 import com.cn.wanxi.model.NewsModel;
 import com.cn.wanxi.service.IHomeService;
@@ -25,6 +21,8 @@ public class HomeServiceImpl implements IHomeService {
 
     private NewsDao newsDao = new NewsDaoImpl();
 
+    private AboutDao aboutDao = new AboutDaoImpl();
+
 
     @Override
     public HomeDto getHomeDto() {
@@ -33,6 +31,7 @@ public class HomeServiceImpl implements IHomeService {
         homeDto.setNavModelList(navDao.getNavList());
         homeDto.setNewsModelList(newsDao.getNewsList());
         homeDto.setStudentModelList(studentDao.getStudentList());
+        homeDto.setAboutModelList(aboutDao.getAboutList());
         return homeDto;
     }
 

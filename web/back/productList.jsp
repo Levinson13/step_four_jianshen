@@ -25,11 +25,11 @@
 <div>产品名称：<input type="text" id="name" name="name"></div>
 <div>产品类别：
     <select id="type" name = type>
-        <option value="0">全部</option>
-        <option value="1">杠铃</option>
-        <option value="2">瑜伽</option>
-        <option value="3">拳击</option>
-        <option value="4">健身操</option>
+<%--        <option value="0">全部</option>--%>
+<%--        <option value="1">杠铃</option>--%>
+<%--        <option value="2">瑜伽</option>--%>
+<%--        <option value="3">拳击</option>--%>
+<%--        <option value="4">健身操</option>--%>
     </select>
 </div>
 <div>

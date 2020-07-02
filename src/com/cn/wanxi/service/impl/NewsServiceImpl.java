@@ -2,8 +2,10 @@ package com.cn.wanxi.service.impl;
 
 import com.cn.wanxi.dao.NavDao;
 import com.cn.wanxi.dao.NewsDao;
+import com.cn.wanxi.dao.NewsTypeDao;
 import com.cn.wanxi.dao.impl.NavDaoImpl;
 import com.cn.wanxi.dao.impl.NewsDaoImpl;
+import com.cn.wanxi.dao.impl.NewsTypeDaoImpl;
 import com.cn.wanxi.dto.NewsDto;
 import com.cn.wanxi.dto.NewsFindDto;
 import com.cn.wanxi.dto.PageDto;
@@ -18,6 +20,8 @@ public class NewsServiceImpl implements INewsService {
     private NewsDao newsDao = new NewsDaoImpl();
 
     private NavDao navDao = new NavDaoImpl();
+
+    private NewsTypeDao newsTypeDao = new NewsTypeDaoImpl();
 
     @Override
     public int add(NewsModel newsModel) {
@@ -44,6 +48,7 @@ public class NewsServiceImpl implements INewsService {
         ResultDto resultDto = new ResultDto();
         resultDto.setObject(newsDao.getNewsList());
         resultDto.setCount(newsDao.findAllNewsCount());
+        resultDto.setList(newsTypeDao.findAll());
         return resultDto;
     }
 
@@ -52,14 +57,16 @@ public class NewsServiceImpl implements INewsService {
         ResultDto resultDto = new ResultDto();
         resultDto.setObject(newsDao.findNewsListByCondition(condition,pageDto));
         resultDto.setCount(newsDao.findAllNewsCount());
+        resultDto.setList(newsTypeDao.findAll());
         return resultDto;
     }
 
     @Override
     public NewsDto getNewsDto() {
         NewsDto newsDto = new NewsDto();
-        newsDto.setNewsModelList(newsDto.getNewsModelList());
         newsDto.setNavModels(navDao.getNavList());
+        newsDto.setNewsModelList(newsDao.getAllNews());
+        newsDto.setNewsTypeModelList(newsTypeDao.findAll());
         return newsDto;
     }
 

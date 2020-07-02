@@ -1,9 +1,12 @@
 package com.cn.wanxi.dao.impl;
 
 import com.cn.wanxi.dao.CoachDao;
+import com.cn.wanxi.dto.CoachBackDto;
+import com.cn.wanxi.dto.CoachDto;
 import com.cn.wanxi.dto.CoachFindDto;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.model.CoachModel;
+import com.cn.wanxi.model.CoachPostModel;
 import com.cn.wanxi.util.JDBC;
 
 import java.sql.*;
@@ -41,30 +44,13 @@ public class CoachDaoImpl implements CoachDao {
 
     @Override
     public int update(CoachModel coachModel) {
-       Connection connection = null;
-       PreparedStatement preparedStatement = null;
-       int num = 0;
-        try {
-            connection = JDBC.getConnection();
-
-            String sql = "update tb_coach set coach_name=?,coach_post=?,coach_img=? where id=?";
-
-            preparedStatement = connection.prepareStatement(sql);
-
-            preparedStatement.setString(1,coachModel.getCoachName());
-            preparedStatement.setInt(2,coachModel.getCoachPost());
-            preparedStatement.setString(3,coachModel.getCoachImg());
-            preparedStatement.setInt(4,coachModel.getId());
-
-            num = preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            JDBC.release(preparedStatement,connection,null);
+        String sql = "update tb_coach set coach_name='" + coachModel.getCoachName()
+                + "',coach_post=" + coachModel.getCoachPost();
+        if (coachModel.getCoachImg() != null && !"".equals(coachModel.getCoachImg())) {
+            sql += ",coach_img='" + coachModel.getCoachImg() + "'";
         }
-        return num;
+        sql += " where id = " + coachModel.getId();
+        return JDBC.excuteUpdate(sql);
     }
 
     @Override
@@ -127,21 +113,22 @@ public class CoachDaoImpl implements CoachDao {
     }
 
     @Override
-    public List<CoachModel> getCoachList() {
+    public List<CoachBackDto> getCoachList() {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        List<CoachModel> coachModelList = new ArrayList<>();
+        List<CoachBackDto> coachBackDtoList = new ArrayList<>();
         try {
             connection = JDBC.getConnection();
 
-            String sql = "select * from tb_coach";
+            String sql = "select tc.*,tcp.post from tb_coach tc ,tb_coach_post tcp where tc.coach_post = tcp.id";
 
             preparedStatement = connection.prepareStatement(sql);
 
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
+                CoachBackDto coachBackDto = new CoachBackDto();
                 CoachModel coachModel = new CoachModel();
                 coachModel.setId(resultSet.getInt("id"));
                 coachModel.setCoachName(resultSet.getString("coach_name"));
@@ -149,7 +136,9 @@ public class CoachDaoImpl implements CoachDao {
                 coachModel.setCoachImg(resultSet.getString("coach_img"));
 //                java.util.Date date = resultSet.getDate("create_time");
                 coachModel.setCreateDate(resultSet.getString("create_time"));
-                coachModelList.add(coachModel);
+                coachBackDto.setCoachModel(coachModel);
+                coachBackDto.setPost(resultSet.getString("post"));
+                coachBackDtoList.add(coachBackDto);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -158,12 +147,12 @@ public class CoachDaoImpl implements CoachDao {
         } finally {
             JDBC.release(preparedStatement,connection,resultSet);
         }
-        return coachModelList;
+        return coachBackDtoList;
     }
 
     @Override
-    public List<CoachModel> findCoachListByCondition(CoachFindDto condition, PageDto pageDto) {
-        String sql = "select * from tb_coach where 1=1 ";
+    public List<CoachBackDto> findCoachListByCondition(CoachFindDto condition, PageDto pageDto) {
+        String sql = "select tc.*,tcp.post from tb_coach tc ,tb_coach_post tcp where tc.coach_post = tcp.id ";
         if (condition.getCoachName() != null && !"".equals(condition.getCoachName())) {
             sql += "and coach_name like '%" + condition.getCoachName() + "%' ";
         }
@@ -173,21 +162,25 @@ public class CoachDaoImpl implements CoachDao {
         sql += " limit " + (pageDto.getPageNum() - 1) * pageDto.getPageSize() + "," + pageDto.getPageSize();
         System.out.println("sql:" + sql);
         ResultSet resultSet = JDBC.excuteQuery(sql);
-        List<CoachModel> coachModelList = new ArrayList<>();
+        List<CoachBackDto> coachBackDtoList = new ArrayList<>();
         try {
             while (resultSet.next()) {
+                CoachBackDto coachBackDto = new CoachBackDto();
                 CoachModel coachModel = new CoachModel();
                 coachModel.setId(resultSet.getInt("id"));
                 coachModel.setCoachName(resultSet.getString("coach_name"));
-                coachModel.setCoachImg(resultSet.getString("coach_img"));
                 coachModel.setCoachPost(resultSet.getInt("coach_post"));
+                coachModel.setCoachImg(resultSet.getString("coach_img"));
+//                java.util.Date date = resultSet.getDate("create_time");
                 coachModel.setCreateDate(resultSet.getString("create_time"));
-                coachModelList.add(coachModel);
+                coachBackDto.setCoachModel(coachModel);
+                coachBackDto.setPost(resultSet.getString("post"));
+                coachBackDtoList.add(coachBackDto);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return coachModelList;
+        return coachBackDtoList;
     }
 
     @Override
@@ -204,5 +197,24 @@ public class CoachDaoImpl implements CoachDao {
         }
         System.out.println("count:"+count);
         return count;
+    }
+
+    @Override
+    public List<CoachModel> getAllCoach() {
+        String sql = "select * from tb_coach";
+        ResultSet resultSet = JDBC.excuteQuery(sql);
+        List<CoachModel> coachModelList = new ArrayList<>();
+        try {
+            while (resultSet.next()) {
+                CoachModel coachModel = new CoachModel();
+                coachModel.setCoachName(resultSet.getString("coach_name"));
+                coachModel.setCoachImg(resultSet.getString("coach_img"));
+                coachModel.setCoachPost(resultSet.getInt("coach_post"));
+                coachModelList.add(coachModel);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return coachModelList;
     }
 }

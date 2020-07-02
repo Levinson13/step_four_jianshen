@@ -1,7 +1,12 @@
 package com.cn.wanxi.service.impl;
 
 import com.cn.wanxi.dao.AboutDao;
+import com.cn.wanxi.dao.NavDao;
+import com.cn.wanxi.dao.StudentDao;
 import com.cn.wanxi.dao.impl.AboutDaoImpl;
+import com.cn.wanxi.dao.impl.NavDaoImpl;
+import com.cn.wanxi.dao.impl.StudentDaoImpl;
+import com.cn.wanxi.dto.AboutDto;
 import com.cn.wanxi.dto.AboutFindDto;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.dto.ResultDto;
@@ -15,6 +20,10 @@ import java.util.Date;
 public class AboutServiceImpl implements IAboutService {
 
     private AboutDao aboutDao = new AboutDaoImpl();
+
+    private StudentDao studentDao = new StudentDaoImpl();
+
+    private NavDao navDao = new NavDaoImpl();
 
     @Override
     public int add(AboutModel aboutModel) {
@@ -51,5 +60,13 @@ public class AboutServiceImpl implements IAboutService {
         resultDto.setObject(aboutDao.findAboutListByCondition(condition,pageDto));
         resultDto.setCount(aboutDao.findAllAboutCount());
         return resultDto;
+    }
+
+    public AboutDto getAboutDto(){
+        AboutDto aboutDto = new AboutDto();
+        aboutDto.setNavModelList(navDao.getNavList());
+        aboutDto.setAboutModelList(aboutDao.getAboutList());
+        aboutDto.setStudentModelList(studentDao.getStudentList());
+        return aboutDto;
     }
 }

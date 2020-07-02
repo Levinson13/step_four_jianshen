@@ -8,7 +8,7 @@ public class CoachPostModel {
 
     private Integer status;
 
-    private String posts[] = {"一级健身员","二级健身员","格斗教练","金牌健身教练","银牌健身教练","铜牌健身教练"};
+    private String createTime;
 
     public Integer getId() {
         return id;
@@ -34,11 +34,11 @@ public class CoachPostModel {
         this.status = status;
     }
 
-    public String[] getPosts() {
-        return posts;
+    public String getCreateTime() {
+        return createTime;
     }
 
-    public void setPosts(String[] posts) {
-        this.posts = posts;
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
 }

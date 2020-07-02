@@ -1,5 +1,7 @@
 package com.cn.wanxi.dao;
 
+import com.cn.wanxi.dto.NewsBackDto;
+import com.cn.wanxi.dto.NewsDto;
 import com.cn.wanxi.dto.NewsFindDto;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.model.NewsModel;
@@ -16,9 +18,12 @@ public interface NewsDao {
 
     NewsModel getOneNewsModel(Integer id);
 
-    List<NewsModel> getNewsList();
+    List<NewsBackDto> getNewsList();
 
-    List<NewsModel> findNewsListByCondition(NewsFindDto newsModel, PageDto pageDto);
+    List<NewsBackDto> findNewsListByCondition(NewsFindDto newsModel, PageDto pageDto);
 
     int findAllNewsCount();
+
+    List<NewsModel> getAllNews();
+
 }

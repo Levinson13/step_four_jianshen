@@ -18,13 +18,13 @@
     <div class="about-text">
         <div class="about-text-cn">关于我们</div>
         <div class="about-text-en">ABOUT US</div>
-        <div class="about-text-content">${companyModel.aboutContent}</div>
+        <div class="about-text-content">${homeDto.aboutModelList[0]}</div>
     </div>
 </div>
 <!--    首页公司介绍-->
 <div class="company">
     <div class="company-parts">
-        <div class="company-content"><${companyModel.companyContent}></div>
+        <div class="company-content"><${homeDto.aboutModelList[1]}></div>
         <!--        <div class="company-fh">＋</div>-->
     </div>
 </div>
@@ -38,9 +38,9 @@
         <div class="coach-nums">
             <c:forEach items="${homeDto.coachModelList}" var="coach" end="2">
                 <div class="coach-num1" align="center">
-                    <div><img src="${coach.coachImg}" height="291" width="317"/></div>
-                    <div class="coach-num-name">${coach.coachName}</div>
-                    <div class="coach-num-post">${coach.coachPost}</div>
+                    <div><img src="${coach.coachModel.coachImg}" height="291" width="317"/></div>
+                    <div class="coach-num-name">${coach.coachModel.coachName}</div>
+                    <div class="coach-num-post">${coach.post}</div>
                 </div>
             </c:forEach>
         </div>
@@ -68,10 +68,10 @@
         <div class="news-fresh-contents">
             <c:forEach items="${homeDto.newsModelList}" var="news" end="2">
                 <div>
-                    <div><img src="${news.newsImg}" height="291" width="317"/></div>
-                    <div class="news-contents-title dhyc">${news.newsTitle}</div>
-                    <div class="news-contents-date"><fmt:formatDate value="${news.createDate}" pattern="yyyy-MM-dd"/> </div>
-                    <div class="news-contents-content dhyc1">${news.newsContent}</div>
+                    <div><img src="${news.newsModel.newsImg}" height="291" width="317"/></div>
+                    <div class="news-contents-title dhyc">${news.type}</div>
+                    <div class="news-contents-date">${news.newsModel.createDate} </div>
+                    <div class="news-contents-content dhyc1">${news.newsModel.newsContent}</div>
                 </div>
             </c:forEach>
         </div>

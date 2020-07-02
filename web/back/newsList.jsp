@@ -19,11 +19,11 @@
 <body>
 <div>新闻标题：<input type="text" id="title" name="title"></div>
 <div>新闻类别：
-    <select id="type" name = type>
-        <option value="0">全部</option>
-        <option value="1">公司信息</option>
-        <option value="2">行业动态</option>
-        <option value="3">媒体报道</option>
+    <select id="type" name = "type">
+<%--        <option value="0">全部</option>--%>
+<%--        <option value="1">公司信息</option>--%>
+<%--        <option value="2">行业动态</option>--%>
+<%--        <option value="3">媒体报道</option>--%>
     </select>
 </div>
 <div>

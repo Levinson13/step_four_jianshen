@@ -24,9 +24,8 @@
             data: {id: id},
             dataType: 'json',
             success: function (data) {
-                // console.log(data);
+                // console.log(data.img);
                 $("#content").val(data.content);
-                $("#img").val(data.img);
             }
         })
     }
@@ -37,20 +36,25 @@
         // data.append("content", $("#content").val());
         // data.append("img", $("#img").val());
         // data.append("id", aboutId);
-        let data = {
-            content: $("#content").val(),
-            img: $("#img").val(),
-            id: aboutId
-        };
+        // let data = {
+        //     content: $("#content").val(),
+        //     img: $("#img")[0].files[0],
+        //     id: aboutId,
+        // };
+        let data = new FormData();
+        data.append("content", $("#content").val());
+        data.append("img", $("#img")[0].files[0]);
+        data.append("id", aboutId);
+        // console.log($("#img")[0].files[0]);
         $.ajax({
             url:'/editAbout',
             type:'post',
             data:data,
             dataType: 'json',
-            // contentType: false,
-            // processData: false,
+            contentType: false,
+            processData: false,
             success:function (data) {
-                console.log(data);
+                // console.log(data);
                 if (data == 1) {
                     $("#homeright").load('/back/aboutList.jsp');
                 }else {
@@ -66,7 +70,7 @@
         信息名称：<input type="text" name="content" id="content">
     </div>
     <div>
-        信息图片：<label><input type="file" name="img" id="img">点击上传</label>
+        信息图片：<label><input type="file" name="img" id="img" hidden>点击上传</label><span id="imgtext"></span>
     </div>
     <div>
         <input type="button" value="提交" onclick="editAboutInfo()">

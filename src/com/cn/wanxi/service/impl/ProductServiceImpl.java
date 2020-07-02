@@ -2,13 +2,16 @@ package com.cn.wanxi.service.impl;
 
 import com.cn.wanxi.dao.NavDao;
 import com.cn.wanxi.dao.ProductDao;
+import com.cn.wanxi.dao.ProductTypeDao;
 import com.cn.wanxi.dao.impl.NavDaoImpl;
 import com.cn.wanxi.dao.impl.ProductDaoImpl;
+import com.cn.wanxi.dao.impl.ProductTypeDaoImpl;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.dto.ProductDto;
 import com.cn.wanxi.dto.ProductFindDto;
 import com.cn.wanxi.dto.ResultDto;
 import com.cn.wanxi.model.ProductModel;
+import com.cn.wanxi.model.ProductTypeModel;
 import com.cn.wanxi.service.IProductService;
 
 import java.text.SimpleDateFormat;
@@ -20,6 +23,8 @@ public class ProductServiceImpl implements IProductService {
     private ProductDao productDao = new ProductDaoImpl();
 
     private NavDao navDao = new NavDaoImpl();
+
+    private ProductTypeDao productTypeDao = new ProductTypeDaoImpl();
 
     @Override
     public int add(ProductModel productModel) {
@@ -47,6 +52,7 @@ public class ProductServiceImpl implements IProductService {
         ResultDto resultDto = new ResultDto();
         resultDto.setObject(productDao.getProductList());
         resultDto.setCount(productDao.findAllProductCount());
+        resultDto.setList(productTypeDao.findAll());
         return resultDto;
     }
 
@@ -55,14 +61,16 @@ public class ProductServiceImpl implements IProductService {
         ResultDto resultDto = new ResultDto();
         resultDto.setObject(productDao.findProductListByCondition(condition,pageDto));
         resultDto.setCount(productDao.findAllProductCount());
+        resultDto.setList(productTypeDao.findAll());
         return resultDto;
     }
 
     @Override
     public ProductDto getProductDto() {
         ProductDto productDto = new ProductDto();
-        productDto.setProductModelList(productDao.getProductList());
-        productDto.setNavModelList(productDto.getNavModelList());
+        productDto.setProductModelList(productDao.getAllProduct());
+        productDto.setNavModelList(navDao.getNavList());
+        productDto.setProductTypeModelList(productTypeDao.findAll());
         return productDto;
     }
 }

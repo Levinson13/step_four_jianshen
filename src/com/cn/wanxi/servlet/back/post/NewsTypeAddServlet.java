@@ -1,8 +1,9 @@
-package com.cn.wanxi.servlet;
+package com.cn.wanxi.servlet.back.post;
 
 import com.alibaba.fastjson.JSON;
-import com.cn.wanxi.service.IUserService;
-import com.cn.wanxi.service.impl.UserServiceImpl;
+import com.cn.wanxi.model.NewsTypeModel;
+import com.cn.wanxi.service.INewsTypeService;
+import com.cn.wanxi.service.impl.NewsTypeServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,22 +12,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/register")
-public class RegisterServlet extends HttpServlet {
+@WebServlet("/addNewsType")
+public class NewsTypeAddServlet extends HttpServlet {
 
-    private IUserService iUserService = new UserServiceImpl();
+    private INewsTypeService iNewsTypeService = new NewsTypeServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
+        String post = req.getParameter("post");
+        String status = req.getParameter("status");
 
-        int num = iUserService.register(username, password);
+        NewsTypeModel newsTypeModel = new NewsTypeModel();
+        newsTypeModel.setType(post);
+        newsTypeModel.setStatus(Integer.parseInt(status));
+
+        int num = iNewsTypeService.add(newsTypeModel);
 
         String json = JSON.toJSONString(num);
         resp.getWriter().println(json);
-
-
     }
 
     @Override

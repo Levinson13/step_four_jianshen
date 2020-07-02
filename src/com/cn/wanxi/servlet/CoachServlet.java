@@ -20,6 +20,7 @@ public class CoachServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CoachDto coachDto = iCoachService.getCoachDto();
         req.setAttribute("coachDto",coachDto);
+        req.setAttribute("navModelList",coachDto.getNavModelList());
         req.getRequestDispatcher("/jsp/coach.jsp").forward(req,resp);
     }
 

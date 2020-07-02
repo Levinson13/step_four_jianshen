@@ -7,6 +7,10 @@
     height: 200px;
     background-color: sandybrown;
 }
+.home-top{
+    float: right;
+    line-height: 40px;
+}
 .home-left {
     width: 15%;
     float: left;

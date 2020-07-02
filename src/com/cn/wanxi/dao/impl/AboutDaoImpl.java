@@ -31,8 +31,11 @@ public class AboutDaoImpl implements AboutDao {
 
     @Override
     public int update(AboutModel aboutModel) {
-        String sql = "update tb_about set about_content='" + aboutModel.getContent() +
-                "',about_img='" + aboutModel.getImg() + "'";
+        String sql = "update tb_about set about_content='" + aboutModel.getContent() + "'";
+        if (!"".equals(aboutModel.getImg()) && aboutModel.getImg() != null){
+            sql += ",about_img='" + aboutModel.getImg() + "'";
+        }
+        sql += " where id = " + aboutModel.getId();
         return JDBC.excuteUpdate(sql);
     }
 

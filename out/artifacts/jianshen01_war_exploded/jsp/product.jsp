@@ -27,13 +27,12 @@
 <!--产品-->
 <div class="product">
     <div align="center">
-        <div>杠铃</div>
-        <div>瑜伽</div>
-        <div>拳击</div>
-        <div>健身操</div>
+        <c:forEach items="${productDto.productTypeModelList}" var="type">
+            <div>${type.type}</div>
+        </c:forEach>
     </div>
     <div class="images">
-        <c:forEach items="${productModelList}" var="product">
+        <c:forEach items="${productDto.productModelList}" var="product">
             <div class="floatLeft" align="center">
                 <div><img src="${product.productImg}" height="240" width="240"/></div>
                 <div>${product.productName}</div>

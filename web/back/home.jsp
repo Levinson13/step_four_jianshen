@@ -14,7 +14,7 @@
     <script type="text/javascript" src="/js/nav.js"></script>
 </head>
 <body>
-<div class="home-top"></div>
+<div class="home-top"><a href="/logout">退出</a></div>
 <div class="home-left">
     <jsp:include page="left.jsp"/>
 </div>

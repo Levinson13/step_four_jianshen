@@ -21,6 +21,7 @@ public class ProductListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         ResultDto productModelList = iProductService.getProductList();
 
         String json = JSON.toJSONString(productModelList);

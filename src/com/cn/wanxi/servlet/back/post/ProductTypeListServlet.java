@@ -1,9 +1,12 @@
-package com.cn.wanxi.servlet.back.coach;
+package com.cn.wanxi.servlet.back.post;
 
 import com.alibaba.fastjson.JSON;
-import com.cn.wanxi.model.CoachModel;
-import com.cn.wanxi.service.ICoachService;
-import com.cn.wanxi.service.impl.CoachServiceImpl;
+import com.cn.wanxi.model.NewsTypeModel;
+import com.cn.wanxi.model.ProductTypeModel;
+import com.cn.wanxi.service.INewsTypeService;
+import com.cn.wanxi.service.IProductTypeService;
+import com.cn.wanxi.service.impl.NewsTypeServiceImpl;
+import com.cn.wanxi.service.impl.ProductTypeServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,20 +14,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet("/coachFindById")
-public class CoachFindById extends HttpServlet {
+@WebServlet("/productTypeList")
+public class ProductTypeListServlet extends HttpServlet {
 
-    private ICoachService iCoachService = new CoachServiceImpl();
+    private IProductTypeService iProductTypeService = new ProductTypeServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String stringId = req.getParameter("id");
-        Integer id = stringId == null ? 0 : Integer.parseInt(stringId);
+        List<ProductTypeModel> productTypeModelList = iProductTypeService.findAll();
 
-        CoachModel coachModel = iCoachService.getOneCoachModel(id);
-
-        String json = JSON.toJSONString(coachModel);
+        String json = JSON.toJSONString(productTypeModelList);
         resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println(json);
     }

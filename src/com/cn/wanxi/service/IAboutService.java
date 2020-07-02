@@ -1,5 +1,6 @@
 package com.cn.wanxi.service;
 
+import com.cn.wanxi.dto.AboutDto;
 import com.cn.wanxi.dto.AboutFindDto;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.dto.ResultDto;
@@ -20,4 +21,6 @@ public interface IAboutService {
     ResultDto getAboutList();
 
     ResultDto findAboutListByCondition(AboutFindDto condition, PageDto pageDto);
+
+    AboutDto getAboutDto();
 }

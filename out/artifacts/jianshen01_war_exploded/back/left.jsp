@@ -13,16 +13,16 @@
 </head>
 <body>
 <ul class="caidan">
-    <li>导航管理
-        <ol>
-            <a href="javascript:$('#homeright').load('/back/navList.jsp')"><li>导航查询</li></a>
-            <a href="javascript:$('#homeright').load('/back/navAdd.jsp')"><li>导航新增</li></a>
-        </ol>
-    </li>
     <li>公司信息
         <ol>
             <a href="javascript:$('#homeright').load('/back/aboutList.jsp')"><li>公司信息查询</li></a>
             <a href="javascript:$('#homeright').load('/back/aboutAdd.jsp')"><li>公司信息新增</li></a>
+        </ol>
+    </li>
+    <li>导航管理
+        <ol>
+            <a href="javascript:$('#homeright').load('/back/navList.jsp')"><li>导航查询</li></a>
+            <a href="javascript:$('#homeright').load('/back/navAdd.jsp')"><li>导航新增</li></a>
         </ol>
     </li>
     <li>新闻管理
@@ -47,6 +47,24 @@
         <ol>
             <a href="javascript:$('#homeright').load('/back/studentList.jsp')"><li>学员查询</li></a>
             <a href="javascript:$('#homeright').load('/back/studentAdd.jsp')"><li>学员新增</li></a>
+        </ol>
+    </li>
+    <li>教练职务管理
+        <ol>
+            <a href="javascript:$('#homeright').load('/back/coachPostList.jsp')"><li>职务查询</li></a>
+            <a href="javascript:$('#homeright').load('/back/coachPostAdd.jsp')"><li>职务新增</li></a>
+        </ol>
+    </li>
+    <li>新闻类别管理
+        <ol>
+            <a href="javascript:$('#homeright').load('/back/newsTypeList.jsp')"><li>类别查询</li></a>
+            <a href="javascript:$('#homeright').load('/back/newsTypeAdd.jsp')"><li>类别新增</li></a>
+        </ol>
+    </li>
+    <li>产品类别管理
+        <ol>
+            <a href="javascript:$('#homeright').load('/back/productTypeList.jsp')"><li>类别查询</li></a>
+            <a href="javascript:$('#homeright').load('/back/productTypeAdd.jsp')"><li>类别新增</li></a>
         </ol>
     </li>
 </ul>

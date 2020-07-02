@@ -34,7 +34,12 @@
             <div>
                 <div><img src="${coach.coachImg}" height="291" width="317"/></div>
                 <div class="coach-num-name">${coach.coachName}</div>
-                <div class="coach-num-post">${coach.coachPost}</div>
+                <c:forEach items="${coachDto.coachPostModelList}" var="post">
+                    <c:if test="${coach.coachPost == post.id}">
+                        <div class="coach-num-post">${post.post}</div>
+                    </c:if>
+                </c:forEach>
+
             </div>
         </c:forEach>
     </div>

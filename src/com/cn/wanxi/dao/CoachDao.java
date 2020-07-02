@@ -1,5 +1,7 @@
 package com.cn.wanxi.dao;
 
+import com.cn.wanxi.dto.CoachBackDto;
+import com.cn.wanxi.dto.CoachDto;
 import com.cn.wanxi.dto.CoachFindDto;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.model.CoachModel;
@@ -15,10 +17,12 @@ public interface CoachDao {
 
     CoachModel getOneCoachModel(Integer id);
 
-    List<CoachModel> getCoachList();
+    List<CoachBackDto> getCoachList();
 
-    List<CoachModel> findCoachListByCondition(CoachFindDto condition, PageDto pageDto);
+    List<CoachBackDto> findCoachListByCondition(CoachFindDto condition, PageDto pageDto);
 
     int findAllCoachCount();
+
+    List<CoachModel> getAllCoach();
 
 }

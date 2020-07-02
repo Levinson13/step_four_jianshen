@@ -19,6 +19,7 @@ public class ProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductDto productDto = iProductService.getProductDto();
+        req.setAttribute("navModelList",productDto.getNavModelList());
         req.setAttribute("productDto",productDto);
         req.getRequestDispatcher("/jsp/product.jsp").forward(req,resp);
     }

@@ -20,6 +20,11 @@
         //     img: $("#img")[0].files[0],
         //     price: $("#price").val()
         // };
+        // let type = '';
+        // for (let i = 0; i < data.list.length; i++) {
+        //     type += '<option value="'+ data.list[i].id +'">'+ data.list[i].type +'</option>';
+        // }
+        // $("#type").html(type);
         let data = new FormData();
         data.append("name", $("#name").val());
         data.append("type",$("#type").val());
@@ -49,10 +54,10 @@
     </div>
     <div>产品类别：
         <select id="type" name = type>
-            <option value="1">杠铃</option>
-            <option value="2">瑜伽</option>
-            <option value="3">拳击</option>
-            <option value="4">健身操</option>
+<%--            <option value="1">杠铃</option>--%>
+<%--            <option value="2">瑜伽</option>--%>
+<%--            <option value="3">拳击</option>--%>
+<%--            <option value="4">健身操</option>--%>
         </select>
     </div>
     <div>

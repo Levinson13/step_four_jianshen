@@ -1,6 +1,8 @@
 package com.cn.wanxi.dao.impl;
 
 import com.cn.wanxi.dao.NewsDao;
+import com.cn.wanxi.dto.NewsBackDto;
+import com.cn.wanxi.dto.NewsDto;
 import com.cn.wanxi.dto.NewsFindDto;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.model.NewsModel;
@@ -42,26 +44,15 @@ public class NewsDaoImpl implements NewsDao {
 
     @Override
     public int update(NewsModel newsModel) {
-        try {
-            // 编写sql语句
-            String sql = "update tb_news set news_title = ?,news_type = ?,news_content=?,news_img=? where id = ?";
-            // 设置参数
-            connection = JDBC.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-
-            preparedStatement.setString(1,newsModel.getNewsTitle());
-            preparedStatement.setInt(2,newsModel.getNewsType());
-            preparedStatement.setString(3,newsModel.getNewsImg());
-            preparedStatement.setString(4,newsModel.getNewsContent());
-            preparedStatement.setInt(5, newsModel.getId());
-
-            num = preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
+        String sql = "update tb_news set news_title = '" + newsModel.getNewsTitle()
+                + "',news_type = " + newsModel.getNewsType()
+                + ",news_content= '" + newsModel.getNewsContent()
+                + "'";
+        if (!"".equals(newsModel.getNewsImg()) && newsModel.getNewsImg() != null) {
+            sql += ",news_img = '" + newsModel.getNewsImg() + "'";
         }
-        return num;
+        sql += "where id = " + newsModel.getId();
+        return JDBC.excuteUpdate(sql);
     }
 
     @Override
@@ -108,12 +99,13 @@ public class NewsDaoImpl implements NewsDao {
     }
 
     @Override
-    public List<NewsModel> getNewsList() {
-        String sql = "select * from tb_news";
+    public List<NewsBackDto> getNewsList() {
+        String sql = "select tn.*,tnt.type from tb_news tn ,tb_news_type tnt where tn.news_type = tnt.id";
         ResultSet resultSet = JDBC.excuteQuery(sql);
-        List<NewsModel> newsModelList = new ArrayList<>();
+        List<NewsBackDto> newsBackDtoList = new ArrayList<>();
             try {
                 while (resultSet.next()) {
+                    NewsBackDto newsBackDto = new NewsBackDto();
                     NewsModel newsModel = new NewsModel();
                     newsModel.setNewsTitle(resultSet.getString("news_title"));
                     newsModel.setNewsType(resultSet.getInt("news_type"));
@@ -121,17 +113,19 @@ public class NewsDaoImpl implements NewsDao {
                     newsModel.setNewsContent(resultSet.getString("news_content"));
                     newsModel.setCreateDate(resultSet.getString("create_time"));
                     newsModel.setId(resultSet.getInt("id"));
-                    newsModelList.add(newsModel);
+                    newsBackDto.setNewsModel(newsModel);
+                    newsBackDto.setType(resultSet.getString("type"));
+                    newsBackDtoList.add(newsBackDto);
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        return newsModelList;
+        return newsBackDtoList;
     }
 
     @Override
-    public List<NewsModel> findNewsListByCondition(NewsFindDto condition, PageDto pageDto) {
-        String sql = "select * from tb_news where 1=1";
+    public List<NewsBackDto> findNewsListByCondition(NewsFindDto condition, PageDto pageDto) {
+        String sql = "select tn.*,tnt.type from tb_news tn ,tb_news_type tnt where tn.news_type = tnt.id";
         if (condition.getTitle() != null && !"".equals(condition.getTitle())) {
             sql += " and news_title like '%" + condition.getTitle() + "%'";
         }
@@ -140,22 +134,25 @@ public class NewsDaoImpl implements NewsDao {
         }
         sql += " limit " + (pageDto.getPageNum() - 1) * pageDto.getPageSize() + "," + pageDto.getPageSize();
         ResultSet resultSet = JDBC.excuteQuery(sql);
-        List<NewsModel> newsModelList = new ArrayList<>();
+        List<NewsBackDto> newsBackDtoList = new ArrayList<>();
         try {
             while (resultSet.next()) {
+                NewsBackDto newsBackDto = new NewsBackDto();
                 NewsModel newsModel = new NewsModel();
-                newsModel.setId(resultSet.getInt("id"));
                 newsModel.setNewsTitle(resultSet.getString("news_title"));
+                newsModel.setNewsType(resultSet.getInt("news_type"));
                 newsModel.setNewsImg(resultSet.getString("news_img"));
                 newsModel.setNewsContent(resultSet.getString("news_content"));
-                newsModel.setNewsType(resultSet.getInt("news_type"));
                 newsModel.setCreateDate(resultSet.getString("create_time"));
-                newsModelList.add(newsModel);
+                newsModel.setId(resultSet.getInt("id"));
+                newsBackDto.setNewsModel(newsModel);
+                newsBackDto.setType(resultSet.getString("type"));
+                newsBackDtoList.add(newsBackDto);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return newsModelList;
+        return newsBackDtoList;
     }
 
     @Override
@@ -172,6 +169,28 @@ public class NewsDaoImpl implements NewsDao {
         }
         System.out.println("count:"+count);
         return count;
+    }
+
+    @Override
+    public List<NewsModel> getAllNews() {
+        String sql = "select * from tb_news";
+        ResultSet resultSet = JDBC.excuteQuery(sql);
+        List<NewsModel> newsModelList = new ArrayList<>();
+        try {
+            while (resultSet.next()) {
+                NewsModel newsModel = new NewsModel();
+                newsModel.setNewsTitle(resultSet.getString("news_title"));
+                newsModel.setNewsContent(resultSet.getString("news_content"));
+                newsModel.setNewsImg(resultSet.getString("news_img"));
+                newsModel.setNewsType(resultSet.getInt("news_type"));
+                newsModel.setCreateDate(resultSet.getString("create_time"));
+                newsModel.setId(resultSet.getInt("id"));
+                newsModelList.add(newsModel);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return newsModelList;
     }
 
 }

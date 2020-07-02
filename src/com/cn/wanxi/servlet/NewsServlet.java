@@ -22,6 +22,7 @@ public class NewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         NewsDto newsDto = iNewsService.getNewsDto();
+        req.setAttribute("navModelList",newsDto.getNavModels());
         req.setAttribute("newsDto",newsDto);
         req.getRequestDispatcher("/jsp/news.jsp").forward(req,resp);
     }

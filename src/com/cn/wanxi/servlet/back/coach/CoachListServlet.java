@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.dto.ResultDto;
 import com.cn.wanxi.model.CoachModel;
+import com.cn.wanxi.service.ICoachPostService;
 import com.cn.wanxi.service.ICoachService;
+import com.cn.wanxi.service.impl.CoachPostServiceImpl;
 import com.cn.wanxi.service.impl.CoachServiceImpl;
 
 import javax.servlet.ServletException;
@@ -20,12 +22,13 @@ public class CoachListServlet extends HttpServlet {
 
     private ICoachService iCoachService = new CoachServiceImpl();
 
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+
         ResultDto resultDto = iCoachService.getCoachList();
 //        List<CoachModel> coachModelList = iCoachService.getCoachList();
-
         resp.setContentType("text/html;charset=utf-8");
         String json = JSON.toJSONString(resultDto);
         resp.getWriter().println(json);

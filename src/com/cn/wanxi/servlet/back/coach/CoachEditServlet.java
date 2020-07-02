@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.cn.wanxi.model.CoachModel;
 import com.cn.wanxi.service.ICoachService;
 import com.cn.wanxi.service.impl.CoachServiceImpl;
+import com.cn.wanxi.util.Upload;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,17 +20,21 @@ public class CoachEditServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("name");
-        Integer post = Integer.parseInt(req.getParameter("post"));
-        String img = req.getParameter("img");
-        Integer id = Integer.parseInt(req.getParameter("id"));
+//        String name = req.getParameter("name");
+//        Integer post = Integer.parseInt(req.getParameter("post"));
+//        String img = req.getParameter("img");
+//        Integer id = Integer.parseInt(req.getParameter("id"));
 
+        Upload upload = new Upload();
+        String string = upload.fileImg(req);
+        String[] aa = string.split("@@");
 
         CoachModel coachModel = new CoachModel();
-        coachModel.setCoachName(name);
-        coachModel.setCoachPost(post);
-        coachModel.setCoachImg(img);
-        coachModel.setId(id);
+        coachModel.setId(Integer.parseInt(aa[0]));
+        coachModel.setCoachName(aa[1]);
+        coachModel.setCoachPost(Integer.parseInt(aa[2]));
+        coachModel.setCoachImg("undefined".equals(aa[3]) ? null : aa[3]);
+
 
         int num = iCoachService.update(coachModel);
 

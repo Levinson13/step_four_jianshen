@@ -1,14 +1,17 @@
 package com.cn.wanxi.service.impl;
 
 import com.cn.wanxi.dao.CoachDao;
+import com.cn.wanxi.dao.CoachPostDao;
 import com.cn.wanxi.dao.NavDao;
 import com.cn.wanxi.dao.impl.CoachDaoImpl;
+import com.cn.wanxi.dao.impl.CoachPostDaoImpl;
 import com.cn.wanxi.dao.impl.NavDaoImpl;
 import com.cn.wanxi.dto.CoachDto;
 import com.cn.wanxi.dto.CoachFindDto;
 import com.cn.wanxi.dto.PageDto;
 import com.cn.wanxi.dto.ResultDto;
 import com.cn.wanxi.model.CoachModel;
+import com.cn.wanxi.model.CoachPostModel;
 import com.cn.wanxi.service.ICoachService;
 
 import java.util.Date;
@@ -19,6 +22,8 @@ public class CoachServiceImpl implements ICoachService {
     private CoachDao coachDao = new CoachDaoImpl();
 
     private NavDao navDao = new NavDaoImpl();
+
+    private CoachPostDao coachPostDao = new CoachPostDaoImpl();
 
     @Override
     public int add(CoachModel coachModel) {
@@ -45,6 +50,7 @@ public class CoachServiceImpl implements ICoachService {
         ResultDto resultDto = new ResultDto();
         resultDto.setCount(coachDao.findAllCoachCount());
         resultDto.setObject(coachDao.getCoachList());
+        resultDto.setList(coachPostDao.findAll());
         return resultDto;
     }
 
@@ -53,14 +59,16 @@ public class CoachServiceImpl implements ICoachService {
         ResultDto resultDto = new ResultDto();
         resultDto.setObject(coachDao.findCoachListByCondition(condition,pageDto));
         resultDto.setCount(coachDao.findAllCoachCount());
+        resultDto.setList(coachPostDao.findAll());
         return resultDto;
     }
 
     @Override
     public CoachDto getCoachDto() {
         CoachDto coachDto = new CoachDto();
-        coachDto.setCoachModelList(coachDto.getCoachModelList());
+        coachDto.setCoachModelList(coachDao.getAllCoach());
         coachDto.setNavModelList(navDao.getNavList());
+        coachDto.setCoachPostModelList(coachPostDao.findAll());
         return coachDto;
     }
 }

@@ -47,7 +47,7 @@ public class StudentEditServlet extends HttpServlet {
         studentModel.setStuContent(aa[5]);
         studentModel.setStuSex(Integer.parseInt(aa[6]));
         studentModel.setStuAge(Integer.parseInt(aa[7]));
-        studentModel.setStuImg(aa[8]);
+        studentModel.setStuImg("undefined".equals(aa[8]) ? null : aa[8]);
 
         int num = iStudentService.update(studentModel);
 

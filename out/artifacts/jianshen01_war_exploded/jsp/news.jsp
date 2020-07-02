@@ -30,17 +30,18 @@
 <div class="news-middle">
     <!--    新闻资讯下的标题-->
     <div align="center">
-        <div>公司新闻</div>
-        <div>行业动态</div>
-        <div>媒体报道</div>
+        <c:forEach items="${newsDto.newsTypeModelList}" var="type">
+            <div>${type.type}</div>
+        </c:forEach>>
     </div>
     <!--    具体标题的新闻-->
     <div class="news" >
-        <c:forEach items="${newsModelList}" var="news">
+        <c:forEach items="${newsDto.newsModelList}" var="news">
             <div>
                 <div class="floatLeft" align="center">
-                    <div><fmt:formatDate value="${news.createDate}" pattern="dd"/></div>
-                    <div><fmt:formatDate value="${news.createDate}" pattern="yyyy-MM"/></div>
+                    <fmt:parseDate value="${news.createDate}" var="time" pattern="yyyy-MM-dd"/>
+                    <div><fmt:formatDate value="${time}" pattern="dd"/></div>
+                    <div><fmt:formatDate value="${time}" pattern="yyyy-MM"/></div>
                 </div>
                 <div class="floatLeft">
                         <div>${news.newsTitle}</div>

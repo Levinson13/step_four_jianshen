@@ -20,13 +20,13 @@
 <div>教练姓名：<input type="text" id="coachname" name="coachname"></div>
 <div>教练职务：
     <select id="post">
-        <option value="0">全部</option>
-        <option value="1">一级健身员</option>
-        <option value="2">二级健身员</option>
-        <option value="3">格斗教练</option>
-        <option value="4">金牌健身教练</option>
-        <option value="5">银牌健身教练</option>
-        <option value="6">铜牌健身教练</option>
+<%--        <option value="0">全部</option>--%>
+<%--        <option value="1">一级健身员</option>--%>
+<%--        <option value="2">二级健身员</option>--%>
+<%--        <option value="3">格斗教练</option>--%>
+<%--        <option value="4">金牌健身教练</option>--%>
+<%--        <option value="5">银牌健身教练</option>--%>
+<%--        <option value="6">铜牌健身教练</option>--%>
     </select>
 </div>
 <input type="button" id="find" name="find" onclick="find()" value="查询"/>

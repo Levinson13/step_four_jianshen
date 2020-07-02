@@ -42,11 +42,14 @@ public class StudentDaoImpl implements StudentDao {
                 "',stu_phone='" + studentModel.getStuPhone() +
                 "',stu_email='" + studentModel.getStuEmail() +
                 "',stu_content='" + studentModel.getStuContent() +
-                "',stu_img='" + studentModel.getStuImg() +
                 "',stu_sex=" + studentModel.getStuSex() +
                 ",stu_age=" + studentModel.getStuAge() +
                 ",stu_password='" + studentModel.getStuPassword() +
-                "' where id = " + studentModel.getId();
+                "'";
+        if (studentModel.getStuImg() != null && !"".equals(studentModel.getStuImg())) {
+            sql += ",stu_img = '" + studentModel.getStuImg() + "'";
+        }
+        sql += " where id = " + studentModel.getId();
         return JDBC.excuteUpdate(sql);
     }
 

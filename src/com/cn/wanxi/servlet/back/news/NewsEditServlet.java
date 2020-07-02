@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.cn.wanxi.model.NewsModel;
 import com.cn.wanxi.service.INewsService;
 import com.cn.wanxi.service.impl.NewsServiceImpl;
+import com.cn.wanxi.util.Upload;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,16 +20,22 @@ public class NewsEditServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Integer id = Integer.parseInt(req.getParameter("id"));
-        String title = req.getParameter("title");
-        String type = req.getParameter("type");
-        String content = req.getParameter("content");
+
+        Upload upload = new Upload();
+        String string = upload.fileImg(req);
+        String[] aa = string.split("@@");
+
+//        Integer id = Integer.parseInt(req.getParameter("id"));
+//        String title = req.getParameter("title");
+//        String type = req.getParameter("type");
+//        String content = req.getParameter("content");
 
         NewsModel newsModel = new NewsModel();
-        newsModel.setId(id);
-        newsModel.setNewsTitle(title);
-        newsModel.setNewsType(Integer.parseInt(type));
-        newsModel.setNewsContent(content);
+        newsModel.setId(Integer.parseInt(aa[0]));
+        newsModel.setNewsTitle(aa[1]);
+        newsModel.setNewsType(Integer.parseInt(aa[2]));
+        newsModel.setNewsContent(aa[3]);
+        newsModel.setNewsImg("undefined".equals(aa[4]) ? null : aa[4]);
 
         int num = iNewsService.update(newsModel);
 

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-//@WebFilter("/*")
+@WebFilter("/*")
 public class MyFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -35,10 +35,10 @@ public class MyFilter implements Filter {
         list.add("/callus");
         list.add("/news");
         list.add("/product");
+        list.add("/coach");
         list.add("/top");
         list.add("/foot");
         list.add("/code");
-
 
         boolean go = false;
         for (String p : list) {
@@ -47,7 +47,7 @@ public class MyFilter implements Filter {
                 break;
             }
         }
-        String files[] = {"/jsp/","/js/","/css/","/img/"};
+        String files[] = {"/jsp/","/js/","/css/","/img/","/loadImg/"};
         for (String f : files) {
             if (path.startsWith(f)) {
                 go = true;

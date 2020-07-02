@@ -2,6 +2,8 @@ package com.cn.wanxi.dao.impl;
 
 import com.cn.wanxi.dao.ProductDao;
 import com.cn.wanxi.dto.PageDto;
+import com.cn.wanxi.dto.ProductBackDto;
+import com.cn.wanxi.dto.ProductDto;
 import com.cn.wanxi.dto.ProductFindDto;
 import com.cn.wanxi.model.ProductModel;
 import com.cn.wanxi.util.JDBC;
@@ -35,10 +37,12 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public int update(ProductModel productModel) {
         String sql = "update tb_product set product_name='" + productModel.getProductName() +
-                "',product_type='" + productModel.getProductType() +
-                "',product_img='" + productModel.getProductImg() +
-                "',product_price=" + productModel.getProductPrice() +
-                " where id = " + productModel.getId();
+                "',product_type=" + productModel.getProductType() +
+                ",product_price=" + productModel.getProductPrice();
+        if (productModel.getProductImg() != null && !"".equals(productModel.getProductImg())) {
+            sql += ",product_img='" + productModel.getProductImg() + "'";
+        }
+        sql += " where id = " + productModel.getId();
         return JDBC.excuteUpdate(sql);
     }
 
@@ -70,12 +74,13 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public List<ProductModel> getProductList() {
-        List<ProductModel> productModelList = new ArrayList<>();
-        String sql = "select * from tb_product";
+    public List<ProductBackDto> getProductList() {
+        List<ProductBackDto> productBackDtoList = new ArrayList<>();
+        String sql = "select tp.*,tpt.type from tb_product tp ,tb_product_type tpt where tp.product_type = tpt.id";
         resultSet = JDBC.excuteQuery(sql);
         try {
             while (resultSet.next()) {
+                ProductBackDto productBackDto = new ProductBackDto();
                 ProductModel productModel = new ProductModel();
                 productModel.setId(resultSet.getInt("id"));
                 productModel.setProductName(resultSet.getString("product_name"));
@@ -83,12 +88,15 @@ public class ProductDaoImpl implements ProductDao {
                 productModel.setProductImg(resultSet.getString("product_img"));
                 productModel.setProductPrice(resultSet.getDouble("product_price"));
                 productModel.setCreateDate(resultSet.getString("create_time"));
-                productModelList.add(productModel);
+
+                productBackDto.setProductModel(productModel);
+                productBackDto.setType(resultSet.getString("type"));
+                productBackDtoList.add(productBackDto);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return productModelList;
+        return productBackDtoList;
     }
 
     public int findAllProductCount() {
@@ -107,8 +115,30 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public List<ProductModel> findProductListByCondition(ProductFindDto productFindDto, PageDto pageDto) {
-        String sql = "select * from tb_product where 1=1";
+    public List<ProductModel> getAllProduct() {
+        String sql = "select * from tb_product";
+        ResultSet resultSet = JDBC.excuteQuery(sql);
+        List<ProductModel> productModelList = new ArrayList<>();
+        try {
+            while (resultSet.next()) {
+                ProductModel productModel = new ProductModel();
+                productModel.setId(resultSet.getInt("id"));
+                productModel.setProductName(resultSet.getString("product_name"));
+                productModel.setProductPrice(resultSet.getDouble("product_price"));
+                productModel.setProductImg(resultSet.getString("product_img"));
+                productModel.setProductType(resultSet.getInt("product_type"));
+                productModel.setCreateDate(resultSet.getString("create_time"));
+                productModelList.add(productModel);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return productModelList;
+    }
+
+    @Override
+    public List<ProductBackDto> findProductListByCondition(ProductFindDto productFindDto, PageDto pageDto) {
+        String sql = "select tp.*,tpt.type from tb_product tp ,tb_product_type tpt where tp.product_type = tpt.id";
         if (productFindDto.getName() != null && !"".equals(productFindDto.getName())) {
             sql += " and product_name like '%" + productFindDto.getName() + "%'";
         }
@@ -120,22 +150,26 @@ public class ProductDaoImpl implements ProductDao {
         }
         sql += " limit " + (pageDto.getPageNum() - 1) * pageDto.getPageSize() + "," + pageDto.getPageSize();
         resultSet = JDBC.excuteQuery(sql);
-        List<ProductModel> productModelList = new ArrayList<>();
+        List<ProductBackDto> productBackDtoList = new ArrayList<>();
         try {
             while (resultSet.next()) {
+                ProductBackDto productBackDto = new ProductBackDto();
                 ProductModel productModel = new ProductModel();
                 productModel.setId(resultSet.getInt("id"));
-                productModel.setProductType(resultSet.getInt("product_type"));
                 productModel.setProductName(resultSet.getString("product_name"));
+                productModel.setProductType(resultSet.getInt("product_type"));
                 productModel.setProductImg(resultSet.getString("product_img"));
                 productModel.setProductPrice(resultSet.getDouble("product_price"));
                 productModel.setCreateDate(resultSet.getString("create_time"));
-                productModelList.add(productModel);
+
+                productBackDto.setProductModel(productModel);
+                productBackDto.setType(resultSet.getString("type"));
+                productBackDtoList.add(productBackDto);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return productModelList;
+        return productBackDtoList;
     }
 
 

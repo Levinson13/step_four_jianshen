@@ -12,7 +12,7 @@
     <div class="about-top-background">
         <div class="about-nav">
             <!--      导航图片logo-->
-            <div class="about-logo-img"><img src="${companyModel.logo}" height="59.05" width="95"/></div>
+            <div class="about-logo-img"><img src="" height="59.05" width="95"/></div>
             <div class="about-zi">
                 <!-- 中文名称-->
                 <div class="about-zi-cn">某某健身</div>
@@ -20,8 +20,8 @@
                 <div class="about-zi-en">FITNESS</div>
             </div>
             <div class="about-nav-parts">
-                <c:forEach items="${homeDto.navModelList}" var="nav">
-                    <a href="${nav.href}"><div>${nav.name}</div></a>
+                <c:forEach items="${navModelList}" var="nav">
+                    <a href="${nav.href}"><div>${nav.title}</div></a>
                 </c:forEach>
             </div>
         </div>

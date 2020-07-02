@@ -10,6 +10,8 @@ public class ResultDto {
 
     private Integer count;
 
+    private Object list;
+
     public Object getObject() {
         return object;
     }
@@ -24,6 +26,14 @@ public class ResultDto {
 
     public void setCount(Integer count) {
         this.count = count;
+    }
+
+    public Object getList() {
+        return list;
+    }
+
+    public void setList(Object list) {
+        this.list = list;
     }
 
     @Override

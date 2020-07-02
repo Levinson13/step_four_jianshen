@@ -20,6 +20,7 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HomeDto homeDto = iHomeService.getHomeDto();
         req.setAttribute("homeDto", homeDto);
+        req.setAttribute("navModelList",homeDto.getNavModelList());
         req.getRequestDispatcher("/jsp/home.jsp").forward(req,resp);
     }
 

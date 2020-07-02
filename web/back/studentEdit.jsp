@@ -25,16 +25,6 @@
             data:{id:id},
             dataType:'json',
             success:function (data) {
-                if (data.stuImg != "undefined") {
-                    $("#hiddenImg").val(data.stuImg);
-                    let imgHtml = '图片：<input type="text" value="'+ data.stuImg +'" id="img" name="img" readonly>';
-                    $("#imgHtml").html(imgHtml);
-                } else {
-                    let imgHtml = '图片：<input type="file" id="img" name="img">';
-                    $("#imgHtml").html(imgHtml);
-                }
-                console.log($("#hiddenImg").val());
-                console.log("data:" + JSON.stringify(data));
                 $("#name").val(data.stuName);
                 $("#phone").val(data.stuPhone);
                 $("#email").val(data.stuEmail);
@@ -43,7 +33,6 @@
                 $("#sex").val(data.stuSex);
                 $("#age").val(data.stuAge);
                 $("#password").val(data.stuPassword);
-
             }
         })
     }
@@ -69,8 +58,7 @@
         data.append("content", $("#content").val());
         data.append("sex", $("#sex").val());
         data.append("age", $("#age").val());
-        data.append("img", $("#img").val());
-        console.log(JSON.stringify(data))
+        data.append("img", $("#img")[0].files[0]);
         $.ajax({
             url:'/editStudent',
             type:'post',
@@ -94,8 +82,6 @@
 <div>电话：<input type="text" id="phone" name="phone"></div>
 <div>邮箱：<input type="text" id="email" name="email"></div>
 <div>内容：<input type="text" id="content" name="content"></div>
-<div><input type="hidden" id="hiddenImg" name="hiddenImg"></div>
-<%--<div>图片：<input type="file" id="img" name="img"></div>--%>
 <div id="imgHtml"></div>
 <div>性别：<select id="sex">
     <option value="1">男</option>
@@ -103,6 +89,7 @@
 </select>
 </div>
 <div>年龄：<input type="text" id="age" name="age"></div>
+<div>图片：<label><input type="file" name="img" id="img" hidden>点击上传</label></div>
 <div><input type="button" value="提交" onclick="editStudentInfo()"></div>
 </body>
 </html>

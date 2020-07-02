@@ -1,6 +1,8 @@
 package com.cn.wanxi.dao;
 
 import com.cn.wanxi.dto.PageDto;
+import com.cn.wanxi.dto.ProductBackDto;
+import com.cn.wanxi.dto.ProductDto;
 import com.cn.wanxi.dto.ProductFindDto;
 import com.cn.wanxi.model.ProductModel;
 
@@ -15,9 +17,11 @@ public interface ProductDao {
 
     ProductModel getOneProductModel(Integer id);
 
-    List<ProductModel> getProductList();
+    List<ProductBackDto> getProductList();
 
-    List<ProductModel> findProductListByCondition(ProductFindDto productFindDto, PageDto pageDto);
+    List<ProductBackDto> findProductListByCondition(ProductFindDto productFindDto, PageDto pageDto);
 
     int findAllProductCount();
+
+    List<ProductModel> getAllProduct();
 }

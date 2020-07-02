@@ -5,6 +5,7 @@ import com.cn.wanxi.model.AboutModel;
 import com.cn.wanxi.service.IAboutService;
 import com.cn.wanxi.service.impl.AboutServiceImpl;
 import com.cn.wanxi.util.Upload;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,18 +22,13 @@ public class AboutEditServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String content = req.getParameter("content");
-        String img = req.getParameter("img");
-
-//        Upload upload = new Upload();
-//        String string = upload.fileImg(req);
-//        String[] aa = string.split("@@");
-
+        Upload upload = new Upload();
+        String string = upload.fileImg(req);
         AboutModel aboutModel = new AboutModel();
-//        aboutModel.setContent(aa[0]);
-//        aboutModel.setImg(aa[1]);
-        aboutModel.setContent(content);
-        aboutModel.setImg(img);
+        String[] aa = string.split("@@");
+        aboutModel.setContent(aa[0]);
+        aboutModel.setImg("undefined".equals(aa[1]) ? null : aa[1]);
+        aboutModel.setId(Integer.parseInt(aa[2]));
 
         int num = iAboutService.update(aboutModel);
 
