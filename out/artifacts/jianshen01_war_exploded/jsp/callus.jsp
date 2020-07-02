@@ -29,32 +29,30 @@
 <div class="ditu">
     <div id="ditu"></div>
     <div class="tubiao">
-
         <div>
-            <c:forEach items="${callUsList}" var="callus" end="1">
+            <c:forEach items="${callUsDto.callUsModelList}" var="callus">
                 <div>
                     <div><img src="${callus.img}" height="60" width="60"/></div>
                     <div>${callus.content}</div>
                 </div>
             </c:forEach>
         </div>
-        <div>
-            <c:forEach items="${callUsList}" var="callus" begin="2" end="3">
-                <div>
-                    <div><img src="${callus.img}" height="60" width="60"/></div>
-                    <div>${callus.content}</div>
-                </div>
-            </c:forEach>
-        </div>
-        <div>
-            <c:forEach items="${callUsList}" var="callus" begin="4" end="5">
-                <div>
-                    <div><img src="${callus.img}" height="60" width="60"/></div>
-                    <div>${callus.content}</div>
-                </div>
-            </c:forEach>
-        </div>
-
+<%--        <div>--%>
+<%--            <c:forEach items="${callUsList}" var="callus" begin="2" end="3">--%>
+<%--                <div>--%>
+<%--                    <div><img src="${callus.img}" height="60" width="60"/></div>--%>
+<%--                    <div>${callus.content}</div>--%>
+<%--                </div>--%>
+<%--            </c:forEach>--%>
+<%--        </div>--%>
+<%--        <div>--%>
+<%--            <c:forEach items="${callUsList}" var="callus" begin="4" end="5">--%>
+<%--                <div>--%>
+<%--                    <div><img src="${callus.img}" height="60" width="60"/></div>--%>
+<%--                    <div>${callus.content}</div>--%>
+<%--                </div>--%>
+<%--            </c:forEach>--%>
+<%--        </div>--%>
     </div>
 </div>
 <jsp:include page="foot.jsp"/>
