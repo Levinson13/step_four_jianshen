@@ -32,20 +32,20 @@
     <div align="center">
         <c:forEach items="${newsDto.newsTypeModelList}" var="type">
             <div>${type.type}</div>
-        </c:forEach>>
+        </c:forEach>
     </div>
     <!--    具体标题的新闻-->
     <div class="news" >
         <c:forEach items="${newsDto.newsModelList}" var="news">
             <div>
                 <div class="floatLeft" align="center">
-                    <fmt:parseDate value="${news.createDate}" var="time" pattern="yyyy-MM-dd"/>
+                    <fmt:parseDate value="${news.newsModel.createDate}" var="time" pattern="yyyy-MM-dd"/>
                     <div><fmt:formatDate value="${time}" pattern="dd"/></div>
                     <div><fmt:formatDate value="${time}" pattern="yyyy-MM"/></div>
                 </div>
                 <div class="floatLeft">
-                        <div>${news.newsTitle}</div>
-                        <div>${news.newsContent}</div>
+                        <div>${news.newsModel.newsTitle}</div>
+                        <div>${news.newsModel.newsContent}</div>
                 </div>
             </div>
         </c:forEach>

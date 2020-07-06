@@ -10,7 +10,7 @@ public class CoachDto {
 
     private List<NavModel> navModelList;
 
-    private List<CoachModel> coachModelList;
+    private List<CoachBackDto> coachModelList;
 
     private List<CoachPostModel> coachPostModelList;
 
@@ -30,13 +30,11 @@ public class CoachDto {
         this.navModelList = navModelList;
     }
 
-    public List<CoachModel> getCoachModelList() {
+    public List<CoachBackDto> getCoachModelList() {
         return coachModelList;
     }
 
-    public void setCoachModelList(List<CoachModel> coachModelList) {
+    public void setCoachModelList(List<CoachBackDto> coachModelList) {
         this.coachModelList = coachModelList;
     }
-
-
 }

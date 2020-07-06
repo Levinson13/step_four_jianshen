@@ -10,15 +10,15 @@ public class ProductDto {
 
     private List<ProductTypeModel> productTypeModelList;
 
-    private List<ProductModel> productModelList;
+    private List<ProductBackDto> productModelList;
 
     private List<NavModel> navModelList;
 
-    public List<ProductModel> getProductModelList() {
+    public List<ProductBackDto> getProductModelList() {
         return productModelList;
     }
 
-    public void setProductModelList(List<ProductModel> productModelList) {
+    public void setProductModelList(List<ProductBackDto> productModelList) {
         this.productModelList = productModelList;
     }
 

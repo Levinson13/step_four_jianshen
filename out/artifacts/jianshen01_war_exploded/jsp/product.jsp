@@ -34,11 +34,11 @@
     <div class="images">
         <c:forEach items="${productDto.productModelList}" var="product">
             <div class="floatLeft" align="center">
-                <div><img src="${product.productImg}" height="240" width="240"/></div>
-                <div>${product.productName}</div>
+                <div><img src="${product.productModel.productImg}" height="240" width="240"/></div>
+                <div>${product.productModel.productName}</div>
                 <div>
                     <span>价格</span>
-                    <span>${product.productPrice}</span>
+                    <span>${product.productModel.productPrice}</span>
                 </div>
             </div>
         </c:forEach>

@@ -12,16 +12,15 @@ public class NewsDto {
 
     private List<NavModel> navModels;
 
-    private List<NewsModel> newsModelList;
+    private List<NewsBackDto> newsModelList;
 
-    public List<NewsModel> getNewsModelList() {
+    public List<NewsBackDto> getNewsModelList() {
         return newsModelList;
     }
 
-    public void setNewsModelList(List<NewsModel> newsModelList) {
+    public void setNewsModelList(List<NewsBackDto> newsModelList) {
         this.newsModelList = newsModelList;
     }
-
 
     public List<NewsTypeModel> getNewsTypeModelList() {
         return newsTypeModelList;

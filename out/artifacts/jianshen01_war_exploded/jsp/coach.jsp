@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 2020/6/3
-  Time: 16:42
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -32,10 +25,10 @@
     <div class="images">
         <c:forEach items="${coachDto.coachModelList}" var="coach">
             <div>
-                <div><img src="${coach.coachImg}" height="291" width="317"/></div>
-                <div class="coach-num-name">${coach.coachName}</div>
+                <div><img src="${coach.coachModel.coachImg}" height="291" width="317"/></div>
+                <div class="coach-num-name">${coach.coachModel.coachName}</div>
                 <c:forEach items="${coachDto.coachPostModelList}" var="post">
-                    <c:if test="${coach.coachPost == post.id}">
+                    <c:if test="${coach.coachModel.coachPost == post.id}">
                         <div class="coach-num-post">${post.post}</div>
                     </c:if>
                 </c:forEach>
